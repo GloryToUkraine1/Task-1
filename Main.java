@@ -8,18 +8,18 @@ public class main {
         System.out.println(3%4);
         System.out.println(5%5);
         // 2)
-        System.out.println("2) Введите основание и высоту треуг.: ");
+        System.out.println("2) Введите основание и высоту треугольника: ");
         double a=sc.nextDouble();
         double h=sc.nextDouble();
         System.out.println("Площадь треуг.:" +triArea(a,h));
         // 3)
-        System.out.println("3) Введите кол-во куриц, коров и свиней: ");
+        System.out.println("3) Введите количество куриц, коров и свиней: ");
         int chick=sc.nextInt();
         int cows=sc.nextInt();
         int pigs=sc.nextInt();
-        System.out.println("Общее кол-во ног скота: " +legs(chick,cows,pigs));
+        System.out.println("Общее количество ног скота: " +legs(chick,cows,pigs));
         // 4)
-        System.out.println("4) Введите вер. выигрыша, размер выигрыша, ставку: ");
+        System.out.println("4) Введите вероятность выигрыша, размер выигрыша, ставку: ");
         double prob=sc.nextDouble();
         double prize=sc.nextDouble();
         double pay=sc.nextDouble();
@@ -40,12 +40,12 @@ public class main {
         int cA= sc.nextInt();
         System.out.println("Сумма всех цифр до введеного числа: " +addUp(cA));
         // 8)
-        System.out.println("8) Введите значения двух ребёр треугольника: ");
+        System.out.println("8) Введите значения двух рёбер треугольника: ");
         int r1=sc.nextInt();
         int r2=sc.nextInt();
         System.out.println("Максимальное значения третьего ребра треугольника: "+ lEdge(r1,r2));
         // 9)
-        System.out.println("9) Введите кол-во элементов массива: ");
+        System.out.println("9) Введите количество элементов массива: ");
         int el=sc.nextInt();
         int pArr[]=new int[el];
         for (int i = 0; i < el; i++) {
@@ -72,7 +72,7 @@ public class main {
     }
     // 3)
     public static int legs(int chick, int cows, int pigs){
-        return chick*2+cows*4+pigs*4;//Умножаем введенных животных на кол-во их ног и суммируем
+        return chick*2+cows*4+pigs*4;//Умножаем введенных животных на количество их ног и суммируем
     }
     // 4)
     public static boolean gamb(double prob, double prize, double pay){
@@ -80,7 +80,7 @@ public class main {
     }
     // 5)
     public static void act(int a, int b, int N){
-        if (a+b==N)//Проверка каждого условия и вывод соответс. сообщения
+        if (a+b==N)//Проверка каждого условия и вывод соответствующего сообщения
             System.out.println("add");
         else if (Math.abs(a-b)==N)
             System.out.println("subtract");
@@ -110,7 +110,7 @@ public class main {
     // 9)
     public static int cArr(int pArr[]){
         int sum=0;
-        for (int i = 0; i < pArr.length; i++) {//Прибавление всех эл. массива. к сумме предварит. возведя в куб
+        for (int i = 0; i < pArr.length; i++) {//Прибавление всех элементов массива. к сумме предварительно возведя в куб
             sum+=Math.pow(pArr[i],3);
         }
         return sum;
